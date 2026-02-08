@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: "autoUpdate",
       includeAssets: ['icon-192.svg', 'icon-512.svg'],
       manifest: {
         name: 'Duisburg Wohn-Straßen',
