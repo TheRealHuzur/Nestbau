@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #102a43;
+}
+
+* { box-sizing: border-box; }
+body, html, #root { margin: 0; height: 100%; }
+input, select, textarea, button { width: 100%; padding: 10px; margin: 6px 0; }
+button { border: 0; border-radius: 8px; background: #1b3a4b; color: white; }
+button.ghost { background: #d9e2ec; color: #102a43; }
+button.danger { background: #c1121f; width: auto; padding: 6px 10px; margin-left: 8px; }
+.page { padding: 16px; }
+.login-page { max-width: 420px; margin: 0 auto; }
+.row { display: flex; align-items: center; }
+.row.gap { gap: 8px; }
+.row.between { justify-content: space-between; }
+.error-text { color: #c1121f; font-weight: 600; }
+
+.map-page { height: 100%; position: relative; }
+.map-container { height: calc(100% - 64px); }
+.top-bar { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 8px; padding: 8px; background: #f0f4f8; }
+.floating { position: absolute; top: 68px; left: 8px; z-index: 1000; background: #fff; padding: 6px; }
+
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45);
+  display: flex; align-items: center; justify-content: center; z-index: 2000;
+}
+.modal {
+  background: white; width: min(520px, 90vw); border-radius: 12px; padding: 16px;
+}
+
+.drawer {
+  position: fixed; right: 0; top: 0; width: min(420px, 100vw); height: 100%;
+  background: white; z-index: 2200; overflow: auto; padding: 16px; box-shadow: -2px 0 12px rgba(0,0,0,0.2);
+}
+
+.traffic-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.traffic.green { background: #2b9348; }
+.traffic.yellow { background: #ffb703; color: #222; }
+.traffic.red { background: #d90429; }
+.traffic.active { outline: 3px solid #000; }
+.checkbox-line { display: flex; gap: 8px; align-items: center; }
+.checkbox-line input { width: auto; }
+
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.photo-card { margin: 0; border: 1px solid #d9e2ec; border-radius: 8px; overflow: hidden; }
+.photo-card img { width: 100%; height: 110px; object-fit: cover; display: block; }
+.photo-card figcaption { padding: 8px; font-size: 12px; }
+
+.favorites-list { list-style: none; margin: 0; padding: 0; }
+.favorites-list li { padding: 10px; border-bottom: 1px solid #d9e2ec; cursor: pointer; display: grid; gap: 4px; }
+.traffic-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.traffic-dot.green { background: #2b9348; }
+.traffic-dot.yellow { background: #ffb703; }
+.traffic-dot.red { background: #d90429; }
